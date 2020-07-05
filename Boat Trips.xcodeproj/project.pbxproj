@@ -7,21 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D42E29ED24AE173600563D1E /* Statistics.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42E29EC24AE173600563D1E /* Statistics.storyboard */; };
+		D42E29EF24AE177300563D1E /* Trips.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42E29EE24AE177300563D1E /* Trips.storyboard */; };
+		D42E29F124AE178100563D1E /* Fuel.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42E29F024AE178100563D1E /* Fuel.storyboard */; };
+		D42E29F324AE6E5100563D1E /* Services.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42E29F224AE6E5100563D1E /* Services.storyboard */; };
+		D42E29F524AE701B00563D1E /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D42E29F424AE701B00563D1E /* Settings.storyboard */; };
+		D42E29FA24AED24400563D1E /* TripsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42E29F924AED24400563D1E /* TripsCell.swift */; };
+		D42E29FE24AF5BFB00563D1E /* testTrip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42E29FD24AF5BFB00563D1E /* testTrip.swift */; };
+		D42E2A0024B0127000563D1E /* TripFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42E29FF24B0127000563D1E /* TripFormViewController.swift */; };
+		D42E2A0324B2809D00563D1E /* TripsData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D42E2A0124B2809D00563D1E /* TripsData.xcdatamodeld */; };
+		D42E2A0524B282A600563D1E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42E2A0424B282A600563D1E /* CoreDataManager.swift */; };
 		D4435F2A24AA86D70084F16C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4435F2924AA86D70084F16C /* AppDelegate.swift */; };
 		D4435F2C24AA86D70084F16C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4435F2B24AA86D70084F16C /* SceneDelegate.swift */; };
 		D4435F2E24AA86D70084F16C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4435F2D24AA86D70084F16C /* FirstViewController.swift */; };
-		D4435F3024AA86D70084F16C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4435F2F24AA86D70084F16C /* SecondViewController.swift */; };
+		D4435F3024AA86D70084F16C /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4435F2F24AA86D70084F16C /* TripsViewController.swift */; };
 		D4435F3324AA86D70084F16C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4435F3124AA86D70084F16C /* Main.storyboard */; };
 		D4435F3524AA86D90084F16C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4435F3424AA86D90084F16C /* Assets.xcassets */; };
 		D4435F3824AA86D90084F16C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4435F3624AA86D90084F16C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D42E29EC24AE173600563D1E /* Statistics.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Statistics.storyboard; sourceTree = "<group>"; };
+		D42E29EE24AE177300563D1E /* Trips.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Trips.storyboard; sourceTree = "<group>"; };
+		D42E29F024AE178100563D1E /* Fuel.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fuel.storyboard; sourceTree = "<group>"; };
+		D42E29F224AE6E5100563D1E /* Services.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Services.storyboard; sourceTree = "<group>"; };
+		D42E29F424AE701B00563D1E /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		D42E29F924AED24400563D1E /* TripsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsCell.swift; sourceTree = "<group>"; };
+		D42E29FD24AF5BFB00563D1E /* testTrip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testTrip.swift; sourceTree = "<group>"; };
+		D42E29FF24B0127000563D1E /* TripFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripFormViewController.swift; sourceTree = "<group>"; };
+		D42E2A0224B2809D00563D1E /* TripsData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TripsData.xcdatamodel; sourceTree = "<group>"; };
+		D42E2A0424B282A600563D1E /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		D4435F2624AA86D70084F16C /* Boat Trips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boat Trips.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4435F2924AA86D70084F16C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4435F2B24AA86D70084F16C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D4435F2D24AA86D70084F16C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D4435F2F24AA86D70084F16C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		D4435F2F24AA86D70084F16C /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		D4435F3224AA86D70084F16C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4435F3424AA86D90084F16C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4435F3724AA86D90084F16C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +59,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D42E29EB24AE166400563D1E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D4435F3624AA86D90084F16C /* LaunchScreen.storyboard */,
+				D4435F3124AA86D70084F16C /* Main.storyboard */,
+				D42E29EC24AE173600563D1E /* Statistics.storyboard */,
+				D42E29EE24AE177300563D1E /* Trips.storyboard */,
+				D42E29F024AE178100563D1E /* Fuel.storyboard */,
+				D42E29F224AE6E5100563D1E /* Services.storyboard */,
+				D42E29F424AE701B00563D1E /* Settings.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		D42E29F624AED1EF00563D1E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D42E29F824AED20F00563D1E /* Cells */,
+				D42E29F724AED1F700563D1E /* ViewControlers */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D42E29F724AED1F700563D1E /* ViewControlers */ = {
+			isa = PBXGroup;
+			children = (
+				D4435F2D24AA86D70084F16C /* FirstViewController.swift */,
+				D4435F2F24AA86D70084F16C /* TripsViewController.swift */,
+				D42E29FF24B0127000563D1E /* TripFormViewController.swift */,
+			);
+			path = ViewControlers;
+			sourceTree = "<group>";
+		};
+		D42E29F824AED20F00563D1E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D42E29F924AED24400563D1E /* TripsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D42E29FC24AF5BE900563D1E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D42E29FD24AF5BFB00563D1E /* testTrip.swift */,
+				D42E2A0424B282A600563D1E /* CoreDataManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		D4435F1D24AA86D70084F16C = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +128,14 @@
 		D4435F2824AA86D70084F16C /* Boat Trips */ = {
 			isa = PBXGroup;
 			children = (
+				D42E29FC24AF5BE900563D1E /* Model */,
+				D42E29F624AED1EF00563D1E /* Views */,
+				D42E29EB24AE166400563D1E /* Storyboards */,
 				D4435F2924AA86D70084F16C /* AppDelegate.swift */,
 				D4435F2B24AA86D70084F16C /* SceneDelegate.swift */,
-				D4435F2D24AA86D70084F16C /* FirstViewController.swift */,
-				D4435F2F24AA86D70084F16C /* SecondViewController.swift */,
-				D4435F3124AA86D70084F16C /* Main.storyboard */,
 				D4435F3424AA86D90084F16C /* Assets.xcassets */,
-				D4435F3624AA86D90084F16C /* LaunchScreen.storyboard */,
 				D4435F3924AA86D90084F16C /* Info.plist */,
+				D42E2A0124B2809D00563D1E /* TripsData.xcdatamodeld */,
 			);
 			path = "Boat Trips";
 			sourceTree = "<group>";
@@ -130,7 +200,12 @@
 			files = (
 				D4435F3824AA86D90084F16C /* LaunchScreen.storyboard in Resources */,
 				D4435F3524AA86D90084F16C /* Assets.xcassets in Resources */,
+				D42E29EF24AE177300563D1E /* Trips.storyboard in Resources */,
+				D42E29F524AE701B00563D1E /* Settings.storyboard in Resources */,
 				D4435F3324AA86D70084F16C /* Main.storyboard in Resources */,
+				D42E29F124AE178100563D1E /* Fuel.storyboard in Resources */,
+				D42E29F324AE6E5100563D1E /* Services.storyboard in Resources */,
+				D42E29ED24AE173600563D1E /* Statistics.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,9 +216,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4435F3024AA86D70084F16C /* SecondViewController.swift in Sources */,
+				D4435F3024AA86D70084F16C /* TripsViewController.swift in Sources */,
+				D42E29FE24AF5BFB00563D1E /* testTrip.swift in Sources */,
+				D42E2A0324B2809D00563D1E /* TripsData.xcdatamodeld in Sources */,
 				D4435F2E24AA86D70084F16C /* FirstViewController.swift in Sources */,
 				D4435F2A24AA86D70084F16C /* AppDelegate.swift in Sources */,
+				D42E29FA24AED24400563D1E /* TripsCell.swift in Sources */,
+				D42E2A0524B282A600563D1E /* CoreDataManager.swift in Sources */,
+				D42E2A0024B0127000563D1E /* TripFormViewController.swift in Sources */,
 				D4435F2C24AA86D70084F16C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -298,7 +378,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joeydamico.Boat-Trips";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -316,7 +396,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joeydamico.Boat-Trips";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -342,6 +422,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D42E2A0124B2809D00563D1E /* TripsData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D42E2A0224B2809D00563D1E /* TripsData.xcdatamodel */,
+			);
+			currentVersion = D42E2A0224B2809D00563D1E /* TripsData.xcdatamodel */;
+			path = TripsData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D4435F1E24AA86D70084F16C /* Project object */;
 }
