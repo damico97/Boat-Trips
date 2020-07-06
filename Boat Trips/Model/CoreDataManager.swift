@@ -25,12 +25,12 @@ struct CoreDataManager {
     }()
     
     @discardableResult
-    func createTrip(locationStart: String, locationEnd: String) -> Trip? {
+    func createTrip(date: Date, locationStart: String, locationEnd: String) -> TripData? {
         let context = persistentContainer.viewContext
         
-        let newTrip = NSEntityDescription.insertNewObject(forEntityName: "Test1", into: context) as! Trip // NSManagedObject
+        let newTrip = NSEntityDescription.insertNewObject(forEntityName: "TripData", into: context) as! TripData // NSManagedObject
 
-        //newTrip.date = date
+        newTrip.date = date
         newTrip.locationStart = locationStart
         newTrip.locationEnd = locationEnd
         //newTrip.hoursPort = hoursPort
@@ -46,10 +46,10 @@ struct CoreDataManager {
         return nil
     }
 
-    func fetchTrips() -> [Trip]? {
+    func fetchTrips() -> [TripData]? {
         let context = persistentContainer.viewContext
 
-        let fetchRequest = NSFetchRequest<Trip>(entityName: "Test1")
+        let fetchRequest = NSFetchRequest<TripData>(entityName: "TripData")
 
         do {
             let trips = try context.fetch(fetchRequest)
@@ -61,6 +61,33 @@ struct CoreDataManager {
         return nil
     }
 
+    func fetchTripsByDate() -> [TripData]? {
+        let context = persistentContainer.viewContext
+
+        let fetchRequest = NSFetchRequest<TripData>(entityName: "TripData")
+        let sort = NSSortDescriptor(key: #keyPath(TripData.date), ascending: false)
+        fetchRequest.sortDescriptors = [sort]
+        do {
+            let trips = try context.fetch(fetchRequest)
+            return trips
+        } catch {
+            print("Cannot fetch Expenses")
+        }
+        
+        return nil
+    }
+    
+    func deleteTrip(tripToDelete: TripData) {
+        let context = persistentContainer.viewContext
+        context.delete(tripToDelete)
+
+        do {
+            try context.save()
+        } catch let saveError {
+            print("Failed to delete: \(saveError)")
+        }
+    }
+    
 /*
     func fetchEmployee(withName name: String) -> Employee? {
         let context = persistentContainer.viewContext

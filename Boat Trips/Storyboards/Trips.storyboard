@@ -155,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="-1129" y="95"/>
         </scene>
-        <!--Trip Form View Controller-->
+        <!--Trips FormVC-->
         <scene sceneID="a8O-yk-rfo">
             <objects>
-                <viewController id="Rw8-bC-tt3" customClass="TripFormViewController" customModule="Boat_Trips" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Rw8-bC-tt3" customClass="TripsFormVC" customModule="Boat_Trips" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v49-fN-0PI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -169,12 +169,12 @@
                                     <navigationItem title="Add Trip" id="u2X-Ie-Xm0">
                                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="gfh-GX-1e4">
                                             <connections>
-                                                <action selector="cancelClicked:" destination="Rw8-bC-tt3" id="ULU-5c-DPX"/>
+                                                <action selector="cancelClicked:" destination="Rw8-bC-tt3" id="H6y-tz-reQ"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="1RY-Or-8nu">
                                             <connections>
-                                                <action selector="doneClicked:" destination="Rw8-bC-tt3" id="Q9B-r3-1eW"/>
+                                                <action selector="doneClicked:" destination="Rw8-bC-tt3" id="sZD-NM-IyC"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -271,14 +271,16 @@
                         <viewLayoutGuide key="safeArea" id="efv-A7-9nR"/>
                     </view>
                     <connections>
-                        <outlet property="dateTextField" destination="Fyf-PU-coC" id="2SL-z0-Ugi"/>
-                        <outlet property="endTextField" destination="me1-61-lf8" id="0Ai-ap-buL"/>
-                        <outlet property="hoursPort" destination="aox-pT-NkN" id="PQq-T5-qxs"/>
-                        <outlet property="hoursStarboard" destination="AzI-jE-Q9Q" id="GUj-Zt-NhH"/>
-                        <outlet property="startTextField" destination="nXd-aa-g9H" id="4GG-LA-ZFA"/>
+                        <outlet property="dateTF" destination="Fyf-PU-coC" id="aLM-hG-ncV"/>
+                        <outlet property="hoursPortTF" destination="aox-pT-NkN" id="oXK-yt-CXZ"/>
+                        <outlet property="hoursStarboard" destination="AzI-jE-Q9Q" id="afl-B5-E6B"/>
+                        <outlet property="locationEndTF" destination="me1-61-lf8" id="LHM-1Y-Gvf"/>
+                        <outlet property="locationStartTF" destination="nXd-aa-g9H" id="Vwp-7E-mrt"/>
+                        <segue destination="cFt-if-kqO" kind="unwind" identifier="submit" unwindAction="unwindToTripsViewControllerWithSegue:" id="yMd-bU-ULl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vj-Wv-4O0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="cFt-if-kqO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="589.85507246376812" y="93.75"/>
         </scene>

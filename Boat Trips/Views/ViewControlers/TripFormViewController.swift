@@ -46,15 +46,7 @@ class TripFormViewController: UIViewController {
         
         CoreDataManager.shared.createTrip(locationStart: startTextField.text ?? "", locationEnd: endTextField.text ?? "")
         
-        //print("Created \(newEntry)")
-        
-        guard let trips = CoreDataManager.shared.fetchTrips() else { return }
-        
-        //print("Trips: \(trips)")
-        
-        for t in trips {
-            print(t.locationStart, t.locationEnd)
-        }
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func cancelClicked(_ sender: Any) {

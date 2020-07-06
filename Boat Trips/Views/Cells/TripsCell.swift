@@ -16,12 +16,16 @@ class TripsCell: UITableViewCell {
     @IBOutlet weak var hoursPort: UILabel!
     @IBOutlet weak var hoursStarboard: UILabel!
     
-    func setTripCell(trip: testTrip) {
-        date.text = trip.date
+    func setTripCell(trip: TripData) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMM dd, YYYY"
+        
+        date.text = dateFormatter.string(from: trip.date!)
         locationStart.text = trip.locationStart
         locationEnd.text = trip.locationEnd
-        hoursPort.text = String(format: "%.2f", trip.hoursPort)
-        hoursStarboard.text = String(format: "%.2f", trip.hoursStarboard)
+        hoursPort.text = "Test"
+        hoursStarboard.text = "Test"
+        //hoursStarboard.text = String(format: "%.2f", trip.hoursStarboard)
     }
     
 }
