@@ -273,7 +273,7 @@
                     <connections>
                         <outlet property="dateTF" destination="Fyf-PU-coC" id="aLM-hG-ncV"/>
                         <outlet property="hoursPortTF" destination="aox-pT-NkN" id="oXK-yt-CXZ"/>
-                        <outlet property="hoursStarboard" destination="AzI-jE-Q9Q" id="afl-B5-E6B"/>
+                        <outlet property="hoursStarboardTF" destination="AzI-jE-Q9Q" id="5mf-Or-2ra"/>
                         <outlet property="locationEndTF" destination="me1-61-lf8" id="LHM-1Y-Gvf"/>
                         <outlet property="locationStartTF" destination="nXd-aa-g9H" id="Vwp-7E-mrt"/>
                         <segue destination="cFt-if-kqO" kind="unwind" identifier="submit" unwindAction="unwindToTripsViewControllerWithSegue:" id="yMd-bU-ULl"/>

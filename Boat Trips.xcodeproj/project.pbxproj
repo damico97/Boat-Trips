@@ -24,6 +24,7 @@
 		D4435F3524AA86D90084F16C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4435F3424AA86D90084F16C /* Assets.xcassets */; };
 		D4435F3824AA86D90084F16C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4435F3624AA86D90084F16C /* LaunchScreen.storyboard */; };
 		D45DBD1724B36AB700D701B8 /* TripsFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DBD1624B36AB700D701B8 /* TripsFormVC.swift */; };
+		D45DBD1924B3CCD100D701B8 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DBD1824B3CCD100D701B8 /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		D4435F3724AA86D90084F16C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4435F3924AA86D90084F16C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D45DBD1624B36AB700D701B8 /* TripsFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsFormVC.swift; sourceTree = "<group>"; };
+		D45DBD1824B3CCD100D701B8 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				D4435F2D24AA86D70084F16C /* FirstViewController.swift */,
 				D4435F2F24AA86D70084F16C /* TripsViewController.swift */,
 				D45DBD1624B36AB700D701B8 /* TripsFormVC.swift */,
+				D45DBD1824B3CCD100D701B8 /* SettingsVC.swift */,
 			);
 			path = ViewControlers;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				D42E2A0524B282A600563D1E /* CoreDataManager.swift in Sources */,
 				D4435F2C24AA86D70084F16C /* SceneDelegate.swift in Sources */,
 				D45DBD1724B36AB700D701B8 /* TripsFormVC.swift in Sources */,
+				D45DBD1924B3CCD100D701B8 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

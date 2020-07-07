@@ -23,9 +23,8 @@ class TripsCell: UITableViewCell {
         date.text = dateFormatter.string(from: trip.date!)
         locationStart.text = trip.locationStart
         locationEnd.text = trip.locationEnd
-        hoursPort.text = "Test"
-        hoursStarboard.text = "Test"
-        //hoursStarboard.text = String(format: "%.2f", trip.hoursStarboard)
+        hoursPort.text = String(format: "%.2f", trip.hoursPort)
+        hoursStarboard.text = String(format: "%.2f", trip.hoursStarboard)
     }
     
 }

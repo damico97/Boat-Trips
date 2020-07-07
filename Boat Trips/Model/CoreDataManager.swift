@@ -25,7 +25,7 @@ struct CoreDataManager {
     }()
     
     @discardableResult
-    func createTrip(date: Date, locationStart: String, locationEnd: String) -> TripData? {
+    func createTrip(date: Date, locationStart: String, locationEnd: String, hoursPort: Float, hoursStarboard: Float) -> TripData? {
         let context = persistentContainer.viewContext
         
         let newTrip = NSEntityDescription.insertNewObject(forEntityName: "TripData", into: context) as! TripData // NSManagedObject
@@ -33,8 +33,8 @@ struct CoreDataManager {
         newTrip.date = date
         newTrip.locationStart = locationStart
         newTrip.locationEnd = locationEnd
-        //newTrip.hoursPort = hoursPort
-        //newTrip.hoursStarboard = hoursStarboard
+        newTrip.hoursPort = hoursPort
+        newTrip.hoursStarboard = hoursStarboard
 
         do {
             try context.save()

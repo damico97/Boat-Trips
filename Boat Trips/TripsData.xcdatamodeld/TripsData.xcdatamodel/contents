@@ -2,10 +2,12 @@
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19E287" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="TripData" representedClassName="TripData" syncable="YES" codeGenerationType="class">
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="hoursPort" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="hoursStarboard" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="locationEnd" optional="YES" attributeType="String"/>
         <attribute name="locationStart" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="TripData" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="TripData" positionX="-63" positionY="-18" width="128" height="118"/>
     </elements>
 </model>
