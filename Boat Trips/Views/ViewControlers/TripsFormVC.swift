@@ -39,7 +39,14 @@ class TripsFormVC: UIViewController {
             dateFormatter.dateFormat = "MM/dd/yyyy - hh:mm a"
             let sumbitDate = dateFormatter.date(from:dateTF.text!)!
             
-            CoreDataManager.shared.createTrip(date: sumbitDate, locationStart: locationStartTF.text ?? "", locationEnd: locationEndTF.text ?? "", hoursPort: Float(hoursPortTF.text!)!, hoursStarboard: Float(hoursStarboardTF.text!)!)
+            let lastTrip = CoreDataManager.shared.fetchNewestTrip()
+            
+            let tripHrPort = Float(hoursPortTF.text!)! - lastTrip![0].hoursPort
+            let tripHrStarboard = Float(hoursStarboardTF.text!)! - lastTrip![0].hoursStarboard
+            print(tripHrPort, tripHrStarboard)
+            
+            
+            CoreDataManager.shared.createTrip(date: sumbitDate, locationStart: locationStartTF.text ?? "", locationEnd: locationEndTF.text ?? "", hoursPort: Float(hoursPortTF.text!)!, hoursStarboard: Float(hoursStarboardTF.text!)!, tripHoursPort: tripHrPort, tripHoursStarboard: tripHrStarboard)
             
             self.dismiss(animated: true, completion: nil)
             self.performSegue(withIdentifier: "submit", sender: self)

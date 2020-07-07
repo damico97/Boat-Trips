@@ -25,7 +25,7 @@ struct CoreDataManager {
     }()
     
     @discardableResult
-    func createTrip(date: Date, locationStart: String, locationEnd: String, hoursPort: Float, hoursStarboard: Float) -> TripData? {
+    func createTrip(date: Date, locationStart: String, locationEnd: String, hoursPort: Float, hoursStarboard: Float, tripHoursPort: Float, tripHoursStarboard: Float) -> TripData? {
         let context = persistentContainer.viewContext
         
         let newTrip = NSEntityDescription.insertNewObject(forEntityName: "TripData", into: context) as! TripData // NSManagedObject
@@ -35,6 +35,8 @@ struct CoreDataManager {
         newTrip.locationEnd = locationEnd
         newTrip.hoursPort = hoursPort
         newTrip.hoursStarboard = hoursStarboard
+        newTrip.tripHoursPort = tripHoursPort
+        newTrip.tripHoursStarboard = tripHoursStarboard
 
         do {
             try context.save()
@@ -70,6 +72,23 @@ struct CoreDataManager {
         do {
             let trips = try context.fetch(fetchRequest)
             return trips
+        } catch {
+            print("Cannot fetch Expenses")
+        }
+        
+        return nil
+    }
+    
+    func fetchNewestTrip() -> [TripData]? {
+        let context = persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<TripData>(entityName: "TripData")
+        let sort = NSSortDescriptor(key: #keyPath(TripData.date), ascending: false)
+        fetchRequest.sortDescriptors = [sort]
+        fetchRequest.fetchLimit = 1
+        do {
+            let newestTrip = try context.fetch(fetchRequest)
+            return newestTrip
         } catch {
             print("Cannot fetch Expenses")
         }

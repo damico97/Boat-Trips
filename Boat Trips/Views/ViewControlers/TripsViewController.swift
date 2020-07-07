@@ -21,6 +21,11 @@ class TripsViewController: UIViewController {
         tripsTableView.dataSource = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tripsTableView.reloadData()
+    }
+    
     @IBAction func unwindToTripsViewController(segue: UIStoryboardSegue) {
         DispatchQueue.global(qos: .userInitiated).async {
             DispatchQueue.main.async {
