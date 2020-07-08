@@ -15,6 +15,8 @@ class TripsCell: UITableViewCell {
     @IBOutlet weak var locationEnd: UILabel!
     @IBOutlet weak var hoursPort: UILabel!
     @IBOutlet weak var hoursStarboard: UILabel!
+    @IBOutlet weak var totalHoursPort: UILabel!
+    @IBOutlet weak var totalHoursStarboard: UILabel!
     
     func setTripCell(trip: TripData) {
         let dateFormatter = DateFormatter()
@@ -25,6 +27,8 @@ class TripsCell: UITableViewCell {
         locationEnd.text = trip.locationEnd
         hoursPort.text = String(format: "%.2f", trip.tripHoursPort)
         hoursStarboard.text = String(format: "%.2f", trip.tripHoursStarboard)
+        totalHoursPort.text = String(format: "%.2f", trip.hoursPort)
+        totalHoursStarboard.text = String(format: "%.2f", trip.hoursStarboard)
     }
     
 }
