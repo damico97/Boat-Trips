@@ -18,13 +18,14 @@
 		D42E2A0524B282A600563D1E /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D42E2A0424B282A600563D1E /* CoreDataManager.swift */; };
 		D4435F2A24AA86D70084F16C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4435F2924AA86D70084F16C /* AppDelegate.swift */; };
 		D4435F2C24AA86D70084F16C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4435F2B24AA86D70084F16C /* SceneDelegate.swift */; };
-		D4435F2E24AA86D70084F16C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4435F2D24AA86D70084F16C /* FirstViewController.swift */; };
+		D4435F2E24AA86D70084F16C /* StatisticsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4435F2D24AA86D70084F16C /* StatisticsVC.swift */; };
 		D4435F3024AA86D70084F16C /* TripsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4435F2F24AA86D70084F16C /* TripsViewController.swift */; };
 		D4435F3324AA86D70084F16C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4435F3124AA86D70084F16C /* Main.storyboard */; };
 		D4435F3524AA86D90084F16C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4435F3424AA86D90084F16C /* Assets.xcassets */; };
 		D4435F3824AA86D90084F16C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4435F3624AA86D90084F16C /* LaunchScreen.storyboard */; };
 		D45DBD1724B36AB700D701B8 /* TripsFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DBD1624B36AB700D701B8 /* TripsFormVC.swift */; };
 		D45DBD1924B3CCD100D701B8 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DBD1824B3CCD100D701B8 /* SettingsVC.swift */; };
+		D493AAFC24B6BB18001C83D4 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D493AAFB24B6BB18001C83D4 /* Defaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +41,7 @@
 		D4435F2624AA86D70084F16C /* Boat Trips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Boat Trips.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4435F2924AA86D70084F16C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D4435F2B24AA86D70084F16C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D4435F2D24AA86D70084F16C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		D4435F2D24AA86D70084F16C /* StatisticsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsVC.swift; sourceTree = "<group>"; };
 		D4435F2F24AA86D70084F16C /* TripsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsViewController.swift; sourceTree = "<group>"; };
 		D4435F3224AA86D70084F16C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4435F3424AA86D90084F16C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		D4435F3924AA86D90084F16C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D45DBD1624B36AB700D701B8 /* TripsFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsFormVC.swift; sourceTree = "<group>"; };
 		D45DBD1824B3CCD100D701B8 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		D493AAFB24B6BB18001C83D4 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +89,7 @@
 		D42E29F724AED1F700563D1E /* ViewControlers */ = {
 			isa = PBXGroup;
 			children = (
-				D4435F2D24AA86D70084F16C /* FirstViewController.swift */,
+				D4435F2D24AA86D70084F16C /* StatisticsVC.swift */,
 				D4435F2F24AA86D70084F16C /* TripsViewController.swift */,
 				D45DBD1624B36AB700D701B8 /* TripsFormVC.swift */,
 				D45DBD1824B3CCD100D701B8 /* SettingsVC.swift */,
@@ -108,6 +110,7 @@
 			children = (
 				D42E29FD24AF5BFB00563D1E /* testTrip.swift */,
 				D42E2A0424B282A600563D1E /* CoreDataManager.swift */,
+				D493AAFB24B6BB18001C83D4 /* Defaults.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,13 +225,14 @@
 				D4435F3024AA86D70084F16C /* TripsViewController.swift in Sources */,
 				D42E29FE24AF5BFB00563D1E /* testTrip.swift in Sources */,
 				D42E2A0324B2809D00563D1E /* TripsData.xcdatamodeld in Sources */,
-				D4435F2E24AA86D70084F16C /* FirstViewController.swift in Sources */,
+				D4435F2E24AA86D70084F16C /* StatisticsVC.swift in Sources */,
 				D4435F2A24AA86D70084F16C /* AppDelegate.swift in Sources */,
 				D42E29FA24AED24400563D1E /* TripsCell.swift in Sources */,
 				D42E2A0524B282A600563D1E /* CoreDataManager.swift in Sources */,
 				D4435F2C24AA86D70084F16C /* SceneDelegate.swift in Sources */,
 				D45DBD1724B36AB700D701B8 /* TripsFormVC.swift in Sources */,
 				D45DBD1924B3CCD100D701B8 /* SettingsVC.swift in Sources */,
+				D493AAFC24B6BB18001C83D4 /* Defaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

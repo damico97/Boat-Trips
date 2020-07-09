@@ -38,7 +38,9 @@ class SettingsVC: UIViewController {
             
             CoreDataManager.shared.createTrip(date: submitDate, locationStart: "Boat Purchased", locationEnd: "", hoursPort: Float(initHoursPort.text!)!, hoursStarboard: Float(initHoursStarboard.text!)!, tripHoursPort: 0.0, tripHoursStarboard: 0.0)
             
-            //self.performSegue(withIdentifier: "submit", sender: self)
+            UserDefaults.standard.set(Float(initHoursPort.text!)!, forKey: Defaults.hoursInitPort)
+            UserDefaults.standard.set(Float(initHoursStarboard.text!)!, forKey: Defaults.hoursInitStarboard)
+            UserDefaults.standard.set(Bool(true), forKey: Defaults.hoursSet)
         }
     }
     

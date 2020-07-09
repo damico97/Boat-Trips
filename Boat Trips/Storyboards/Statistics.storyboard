@@ -10,7 +10,7 @@
         <!--Statistics-->
         <scene sceneID="Gy9-ln-GY7">
             <objects>
-                <viewController id="fSO-X6-bge" customClass="FirstViewController" customModule="Boat_Trips" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="fSO-X6-bge" customClass="StatisticsVC" customModule="Boat_Trips" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ar4-mC-bVo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

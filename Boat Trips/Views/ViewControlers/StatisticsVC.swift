@@ -8,13 +8,17 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class StatisticsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+
     }
 
-
+    override func viewWillAppear(_ animated: Bool) {
+        print(UserDefaults.standard.float(forKey: Defaults.hoursInitPort))
+        print(UserDefaults.standard.float(forKey: Defaults.hoursInitStarboard))
+    }
 }
 
