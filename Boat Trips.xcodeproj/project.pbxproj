@@ -25,6 +25,8 @@
 		D4435F3824AA86D90084F16C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4435F3624AA86D90084F16C /* LaunchScreen.storyboard */; };
 		D45DBD1724B36AB700D701B8 /* TripsFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DBD1624B36AB700D701B8 /* TripsFormVC.swift */; };
 		D45DBD1924B3CCD100D701B8 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D45DBD1824B3CCD100D701B8 /* SettingsVC.swift */; };
+		D47B60EE24B769A800452FE7 /* InitHoursFormVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B60ED24B769A800452FE7 /* InitHoursFormVC.swift */; };
+		D47B60F124B77A7300452FE7 /* TripViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47B60F024B77A7300452FE7 /* TripViewerVC.swift */; };
 		D493AAFC24B6BB18001C83D4 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D493AAFB24B6BB18001C83D4 /* Defaults.swift */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +51,8 @@
 		D4435F3924AA86D90084F16C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D45DBD1624B36AB700D701B8 /* TripsFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripsFormVC.swift; sourceTree = "<group>"; };
 		D45DBD1824B3CCD100D701B8 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		D47B60ED24B769A800452FE7 /* InitHoursFormVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitHoursFormVC.swift; sourceTree = "<group>"; };
+		D47B60F024B77A7300452FE7 /* TripViewerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewerVC.swift; sourceTree = "<group>"; };
 		D493AAFB24B6BB18001C83D4 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +97,8 @@
 				D4435F2F24AA86D70084F16C /* TripsVC.swift */,
 				D45DBD1624B36AB700D701B8 /* TripsFormVC.swift */,
 				D45DBD1824B3CCD100D701B8 /* SettingsVC.swift */,
+				D47B60ED24B769A800452FE7 /* InitHoursFormVC.swift */,
+				D47B60F024B77A7300452FE7 /* TripViewerVC.swift */,
 			);
 			path = ViewControlers;
 			sourceTree = "<group>";
@@ -178,6 +184,7 @@
 				TargetAttributes = {
 					D4435F2524AA86D70084F16C = {
 						CreatedOnToolsVersion = 11.5;
+						LastSwiftMigration = 1150;
 					};
 				};
 			};
@@ -228,10 +235,12 @@
 				D4435F2E24AA86D70084F16C /* StatisticsVC.swift in Sources */,
 				D4435F2A24AA86D70084F16C /* AppDelegate.swift in Sources */,
 				D42E29FA24AED24400563D1E /* TripsCell.swift in Sources */,
+				D47B60EE24B769A800452FE7 /* InitHoursFormVC.swift in Sources */,
 				D42E2A0524B282A600563D1E /* CoreDataManager.swift in Sources */,
 				D4435F2C24AA86D70084F16C /* SceneDelegate.swift in Sources */,
 				D45DBD1724B36AB700D701B8 /* TripsFormVC.swift in Sources */,
 				D45DBD1924B3CCD100D701B8 /* SettingsVC.swift in Sources */,
+				D47B60F124B77A7300452FE7 /* TripViewerVC.swift in Sources */,
 				D493AAFC24B6BB18001C83D4 /* Defaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +385,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AR8X63EML3;
 				INFOPLIST_FILE = "Boat Trips/Info.plist";
@@ -385,6 +395,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.joeydamico.Boat-Trips";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -394,6 +405,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AR8X63EML3;
 				INFOPLIST_FILE = "Boat Trips/Info.plist";

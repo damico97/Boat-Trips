@@ -33,6 +33,13 @@ class TripsVC: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showTripViewer" {
+            let destVC = segue.destination as! TripViewerVC
+            destVC.data = sender as? TripData
+        }
+    }
 }
 
 extension TripsVC: UITableViewDataSource, UITableViewDelegate {
@@ -50,6 +57,14 @@ extension TripsVC: UITableViewDataSource, UITableViewDelegate {
         cell.setTripCell(trip: trip)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //print("\(indexPath.row)")
+        let trips = CoreDataManager.shared.fetchTripsByDate()
+        let trip = trips?[indexPath.row]
+
+        self.performSegue(withIdentifier: "showTripViewer", sender: trip)
     }
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {

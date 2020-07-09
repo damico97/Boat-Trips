@@ -104,7 +104,6 @@ struct CoreDataManager {
             hours += trip.tripHoursPort
         }
         
-        print("PortHours: \(hours)")
         return hours
     }
     
@@ -116,7 +115,6 @@ struct CoreDataManager {
             hours += trip.tripHoursStarboard
         }
         
-        print("StarboardHours: \(hours)")
         return hours
     }
     

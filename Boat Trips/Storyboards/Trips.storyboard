@@ -168,11 +168,37 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tripsTableView" destination="17A-JQ-sc3" id="d0s-3h-eKc"/>
+                        <segue destination="PqB-LB-H4D" kind="show" identifier="showTripViewer" id="3sK-vN-o6c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XAr-zI-wFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-252.17391304347828" y="93.75"/>
+        </scene>
+        <!--Trip ViewerVC-->
+        <scene sceneID="fpd-lb-gYW">
+            <objects>
+                <viewController id="PqB-LB-H4D" customClass="TripViewerVC" customModule="Boat_Trips" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y8Y-6z-N4v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trip Viewer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9PK-vB-fxA">
+                                <rect key="frame" x="136" y="430" width="143" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="k2o-dQ-sgR"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="uOW-4b-nTz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0DE-m5-lrm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="453"/>
         </scene>
         <!--Trips-->
         <scene sceneID="lvY-qp-hy5">
@@ -319,7 +345,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8vj-Wv-4O0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="cFt-if-kqO" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="589.85507246376812" y="93.75"/>
+            <point key="canvasLocation" x="655" y="-231"/>
         </scene>
     </scenes>
     <resources>
