@@ -16,21 +16,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Statistics" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="hZ1-ZU-vgh">
-                                <rect key="frame" x="136" y="426.5" width="142" height="43"/>
+                                <rect key="frame" x="136" y="74" width="142" height="43"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Hours Port:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFB-Dw-VyW">
+                                <rect key="frame" x="20" y="179" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1005.63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khl-3D-KVl">
+                                <rect key="frame" x="309" y="179" width="85" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="Qdi-cb-1yl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Hours Starboard:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVt-vY-SY0">
+                                <rect key="frame" x="20" y="208" width="173" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1005.63" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWO-gb-nM6">
+                                <rect key="frame" x="309" y="208" width="85" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="v6M-d9-mT1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstAttribute="centerY" secondItem="hZ1-ZU-vgh" secondAttribute="centerY" id="Etk-nz-ihG"/>
+                            <constraint firstItem="AOA-MU-OBX" firstAttribute="trailing" secondItem="PWO-gb-nM6" secondAttribute="trailing" constant="20" id="7vH-Cp-IRC"/>
+                            <constraint firstItem="PWO-gb-nM6" firstAttribute="top" secondItem="khl-3D-KVl" secondAttribute="bottom" constant="8" id="B51-eo-F6k"/>
+                            <constraint firstItem="AOA-MU-OBX" firstAttribute="trailing" secondItem="hZ1-ZU-vgh" secondAttribute="trailing" constant="136" id="BQr-Qv-huM"/>
+                            <constraint firstItem="nVt-vY-SY0" firstAttribute="top" secondItem="zFB-Dw-VyW" secondAttribute="bottom" constant="8" id="CQ6-QI-xqG"/>
+                            <constraint firstItem="zFB-Dw-VyW" firstAttribute="top" secondItem="hZ1-ZU-vgh" secondAttribute="bottom" constant="62" id="CyH-MZ-VUG"/>
+                            <constraint firstItem="AOA-MU-OBX" firstAttribute="trailing" secondItem="khl-3D-KVl" secondAttribute="trailing" constant="20" id="EAC-ms-a3m"/>
+                            <constraint firstItem="zFB-Dw-VyW" firstAttribute="leading" secondItem="AOA-MU-OBX" secondAttribute="leading" constant="20" id="MEx-B0-cnH"/>
                             <constraint firstAttribute="centerX" secondItem="hZ1-ZU-vgh" secondAttribute="centerX" id="TWh-jg-6Ml"/>
+                            <constraint firstItem="nVt-vY-SY0" firstAttribute="leading" secondItem="AOA-MU-OBX" secondAttribute="leading" constant="20" id="WRW-1U-SBM"/>
+                            <constraint firstItem="khl-3D-KVl" firstAttribute="top" secondItem="AOA-MU-OBX" secondAttribute="top" constant="135" id="XRQ-GL-9wL"/>
+                            <constraint firstItem="hZ1-ZU-vgh" firstAttribute="top" secondItem="AOA-MU-OBX" secondAttribute="top" constant="30" id="ktr-pi-S6O"/>
+                            <constraint firstItem="hZ1-ZU-vgh" firstAttribute="leading" secondItem="AOA-MU-OBX" secondAttribute="leading" constant="136" id="mf4-Nx-BHX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AOA-MU-OBX"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Statistics" image="guage" landscapeImage="guage" id="iyB-65-iRo"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="totHrPort" destination="khl-3D-KVl" id="13L-1v-hax"/>
+                        <outlet property="totHrStarboard" destination="PWO-gb-nM6" id="iH1-co-UfI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="28P-23-je3" sceneMemberID="firstResponder"/>
             </objects>

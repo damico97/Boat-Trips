@@ -10,7 +10,7 @@
         <!--Trips-->
         <scene sceneID="1x5-84-Y5V">
             <objects>
-                <viewController id="eby-2v-Cnx" customClass="TripsViewController" customModule="Boat_Trips" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eby-2v-Cnx" customClass="TripsVC" customModule="Boat_Trips" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Nbr-Il-df6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

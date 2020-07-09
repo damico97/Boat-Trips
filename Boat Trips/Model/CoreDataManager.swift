@@ -96,6 +96,30 @@ struct CoreDataManager {
         return nil
     }
     
+    func getTotalHoursPort() -> Float {
+        let trips = self.fetchTrips()        
+        var hours = Float(0.0)
+        
+        for trip in trips! {
+            hours += trip.tripHoursPort
+        }
+        
+        print("PortHours: \(hours)")
+        return hours
+    }
+    
+    func getTotalHoursStarboard() -> Float {
+        let trips = self.fetchTrips()
+        var hours = Float(0.0)
+        
+        for trip in trips! {
+            hours += trip.tripHoursStarboard
+        }
+        
+        print("StarboardHours: \(hours)")
+        return hours
+    }
+    
     func deleteTrip(tripToDelete: TripData) {
         let context = persistentContainer.viewContext
         context.delete(tripToDelete)

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TripsViewController: UIViewController {
+class TripsVC: UIViewController {
     
     @IBOutlet weak var tripsTableView: UITableView!
     
@@ -35,7 +35,7 @@ class TripsViewController: UIViewController {
     }
 }
 
-extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
+extension TripsVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let trips = CoreDataManager.shared.fetchTripsByDate() else { return 0 }
         return trips.count

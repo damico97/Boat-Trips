@@ -10,6 +10,9 @@ import UIKit
 
 class StatisticsVC: UIViewController {
 
+    @IBOutlet weak var totHrPort: UILabel!
+    @IBOutlet weak var totHrStarboard: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -17,8 +20,14 @@ class StatisticsVC: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        print(UserDefaults.standard.float(forKey: Defaults.hoursInitPort))
-        print(UserDefaults.standard.float(forKey: Defaults.hoursInitStarboard))
+        //print(UserDefaults.standard.float(forKey: DefaultKeys.hoursInitPort))
+        //print(UserDefaults.standard.float(forKey: DefaultKeys.hoursInitStarboard))
+        showTotalHours()
+    }
+    
+    func showTotalHours() {
+        totHrPort.text = String(format: "%.2f", CoreDataManager.shared.getTotalHoursPort())
+        totHrStarboard.text = String(format: "%.2f", CoreDataManager.shared.getTotalHoursStarboard())
     }
 }
 

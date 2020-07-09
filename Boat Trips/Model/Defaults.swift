@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Defaults {
+struct DefaultKeys {
     static let hoursSet = "hoursSet"
     static let hoursInitPort = "hoursInitPort"
     static let hoursInitStarboard = "hoursInitStarboard"
