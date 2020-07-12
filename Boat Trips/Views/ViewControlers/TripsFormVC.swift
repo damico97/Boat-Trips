@@ -13,6 +13,7 @@ class TripsFormVC: UIViewController {
     @IBOutlet weak var dateTF: UITextField!
     @IBOutlet weak var locationStartTF: UITextField!
     @IBOutlet weak var locationEndTF: UITextField!
+    @IBOutlet weak var locationTurnTF: UITextField!
     @IBOutlet weak var hoursPortTF: UITextField!
     @IBOutlet weak var hoursStarboardTF: UITextField!
     
@@ -22,6 +23,7 @@ class TripsFormVC: UIViewController {
         super.viewDidLoad()
 
         getDate()
+        createToolBar()
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(TripsFormVC.viewTapped(gestureRecognizer:)))
         view.addGestureRecognizer(tapGesture)
@@ -29,6 +31,7 @@ class TripsFormVC: UIViewController {
         datePicker = UIDatePicker()
         datePicker?.datePickerMode = .dateAndTime
         datePicker?.addTarget(self, action: #selector(TripsFormVC.dateChanged(datePicker:)), for: .valueChanged)
+
         
         dateTF.inputView = datePicker
     }
@@ -46,7 +49,7 @@ class TripsFormVC: UIViewController {
             print(tripHrPort, tripHrStarboard)
             
             
-            CoreDataManager.shared.createTrip(date: sumbitDate, locationStart: locationStartTF.text ?? "", locationEnd: locationEndTF.text ?? "", hoursPort: Float(hoursPortTF.text!)!, hoursStarboard: Float(hoursStarboardTF.text!)!, tripHoursPort: tripHrPort, tripHoursStarboard: tripHrStarboard)
+            CoreDataManager.shared.createTrip(date: sumbitDate, locationStart: locationStartTF.text ?? "", locationEnd: locationEndTF.text ?? "", locationTurn: locationTurnTF.text ?? "", hoursPort: Float(hoursPortTF.text!)!, hoursStarboard: Float(hoursStarboardTF.text!)!, tripHoursPort: tripHrPort, tripHoursStarboard: tripHrStarboard, notes: "")
             
             self.dismiss(animated: true, completion: nil)
             self.performSegue(withIdentifier: "submit", sender: self)
@@ -83,7 +86,30 @@ class TripsFormVC: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/YYYY - hh:mm a"
         dateTF.text = dateFormatter.string(from: datePicker.date)
-        dismissKeyboard()
+        //dismissKeyboard()
+    }
+    
+    func createToolBar() {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(TripsFormVC.dismissKeyboard))
+        let dateButton = UIBarButtonItem(title: "Date", style: .plain, target: self, action: #selector(TripsFormVC.setPickerToDate))
+        let timeButton = UIBarButtonItem(title: "Time", style: .plain, target: self, action: #selector(TripsFormVC.setPickerToTime))
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        toolBar.setItems([dateButton, timeButton, spacer, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        dateTF.inputAccessoryView = toolBar
+    }
+    
+    @objc func setPickerToDate() {
+        datePicker?.datePickerMode = .date
+    }
+    
+    @objc func setPickerToTime() {
+        datePicker?.datePickerMode = .dateAndTime
     }
     
     @objc func dismissKeyboard() {
